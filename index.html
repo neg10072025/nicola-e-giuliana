@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicola e Giuliana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Moondance&family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Italianno&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="img/header2.png" class="decor-top" id="decorTop" alt="">
+  <header>
+    <h1>Nicola e Giuliana</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dettagli.html">Dettagli</a>
+    <a href="rsvp.html">RSVP</a>
+    <a href="foto.html">Foto</a>
+    <a href="regalo.html">Per il nostro sogno</a>
+  </nav>
+
+  <div class="page-content">
+    <main>
+      <p>Ci sposiamo!</p>
+      <dd>10 Luglio 2025</dd>
+      <p>Siamo felici di condividere con voi il giorno più importante della nostra vita. Grazie per esserci!</p>
+      <div class="countdown" id="countdown"></div>
+      <script src="script.js"></script>
+    </main>
+  
+    <img src="img/angular.png" class="decor-bottom-right" id="decorBottomRight" alt="">
+  
+  <script>
+    window.addEventListener('resize', () => {
+  const decorTop = document.getElementById('decorTop');
+  const header = document.querySelector('header');
+
+  if (decorTop && header) {
+    const decorHeight = decorTop.offsetHeight;
+    header.style.marginTop = decorHeight + 'px';
+  }
+});
+
+  </script>
+</div>
+  
+</body>
+</html>

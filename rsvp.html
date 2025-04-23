@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicola e Giuliana - Dettagli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Moondance&family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Italianno&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <img src="img/header2.png" class="decor-top" id="decorTop" alt="">
+  <header>
+    <h1>Répondez s'il vous plaît</h1>
+  </header>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dettagli.html">Dettagli</a>
+    <a href="rsvp.html">R.S.V.P.</a>
+    <a href="foto.html">Foto</a>
+    <a href="regalo.html">Per il nostro sogno</a>
+  </nav>
+  
+  <main class="rsvp-container">
+    <h2>Conferma la tua presenza</h2>
+    <p>Ci farebbe piacere sapere se potrai essere con noi in questo giorno speciale!</p>
+    
+    <form class="rsvp-form" action="submit_rsvp.php" method="POST">
+      <label for="name">Nome e Cognome</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="presence">Parteciperai?</label>
+      <select id="presence" name="presence" required>
+        <option value="">Seleziona</option>
+        <option value="yes">Sì, con gioia!</option>
+        <option value="no">Purtroppo no</option>
+      </select>
+  
+      <label for="allergies">Allergie o intolleranze?</label>
+      <textarea id="allergies" name="allergies"></textarea>
+
+      <label for="preferences">Preferenze alimentari (vegetariano, ecc):</label>
+      <textarea id="preferences" name="preferences"></textarea>
+    
+      <label for="notes">Note (es. allergie, accompagnatori...)</label>
+      <textarea id="notes" name="notes" rows="3"></textarea>
+  
+      <button type="submit">Invia conferma</button>
+    </form>
+  </main>
+
+  
+
+</body>
+</html>

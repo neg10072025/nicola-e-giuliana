@@ -1,0 +1,315 @@
+@font-face {
+  font-family: 'amalfi';
+  src: url('fonts/Amalfi Coast.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 1.2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative; /* per ancorare gli elementi .absolute */
+
+  }
+
+.page-content {
+    position: relative;
+    padding-bottom: 10vh; /* spazio per evitare che il contenuto si sovrapponga alla decorazione */
+}
+ 
+/* Contenuto */
+main {
+  padding: 2rem;
+  padding-bottom: 10vh;
+  width: 100%;
+  max-width: 1200px;
+}
+
+header {
+  margin-top: 25vh; /* oppure 50px o 3rem */
+}
+
+h1 {
+  font-family: 'amalfi', cursive;
+  font-size: 7vw;
+  color: #6f9d8e;
+  margin-bottom: 1vh;
+}
+
+/* TESTI */
+dd, p, div {
+  font-size: 2.5vw;
+  margin: 2vh 0;
+  font-family: 'Caveat', cursive;
+  color: #6f9d8e;
+}
+
+/* Navigazione */
+nav {
+  font-family: 'Caveat', cursive;
+  border-bottom: 1px solid transparent;
+  background-image: linear-gradient(to right, #e6ceca, #D1A7A1);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 1px;
+  box-shadow: none;
+}
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #6f9d8e;
+  font-weight: bold;
+  font-size: 3.5vw;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: #D1A7A1;
+}
+
+/*riquadri informazioni*/
+.details-elegant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vw;
+  padding: 8vh 5vw;
+  background: rgba(255, 255, 255, 0.6);
+  align-items: stretch; 
+}
+
+.details-card {
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(209, 151, 129, 0.4); /* soft gold tone */
+  border-radius: 20px;
+  padding: 4vh 3vw;
+  max-width: 500px;
+  min-width: 280px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.details-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.details-card h2 {
+  font-family: 'Amalfi', cursive;
+  color: #6f9d8e;
+  font-size: 3vw;
+  margin-bottom: 1vh;
+}
+
+.details-card p {
+  font-size: 1.6vw;
+  font-family: 'Caveat', cursive;
+  color: #444;
+  margin: 0.7em 0;
+}
+
+.details-card a {
+  display: inline-block;
+  font-size: 1.4vw;
+  color: #a96a6a;
+  background-color: rgba(249, 231, 231, 0.8);
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 1em;
+  font-family: 'Caveat', cursive;
+  border: 1px solid rgba(209, 151, 129, 0.3);
+}
+
+.details-card a:hover {
+  background-color: rgba(238, 210, 210, 0.9);
+  color: #D1A7A1;
+  text-decoration: underline;
+}
+
+.iban-link {
+  color: #D1A7A1;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Caveat', cursive;
+}
+
+.iban-link:hover {
+  color: #6f9d8e;
+}
+
+.iban-box.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.iban-box {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+  pointer-events: auto;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #d3a3a1;
+
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  text-align: center;
+}
+
+
+
+
+/* IMMAGINI DECORATIVE IBAN
+.top-floral {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.bottom-floral {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.side-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 70%;
+  pointer-events: none;
+}
+
+.side-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 70%;
+  pointer-events: none;
+}*/
+
+
+/* Immagini decorative */
+.decor-top,
+.decor-bottom,
+.decor-left,
+.decor-right {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none; /* così non bloccano i click */
+}
+
+.decor-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.decor-bottom {
+  top: 150%;
+  left: 0;
+  width: 80%;
+  height: auto;
+}
+
+.decor-left {
+  top: 50%;
+  left: 0;
+  height: 100%;
+  width: auto;
+}
+
+.decor-right {
+  top: 30%;
+  right: 0%;
+  height: 80%;
+  width: auto;
+}
+
+.decor-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  max-width: 8000px;
+  height: 70%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Layout adattivo */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  nav a {
+    font-size: 4.5vw;
+  }
+
+  dd, p, div {
+    font-size: 4.5vw;
+  }
+
+  main {
+    padding: 4vh 5vw;
+  }
+
+  .decor-bottom-right {
+    width: 35vw;
+  }
+
+  .details-elegant {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-card {
+    width: 90%;
+  }
+
+  .details-card h2 {
+    font-size: 6vw;
+  }
+
+  .details-card p,
+  .details-card a {
+    font-size: 4vw;
+  }
+
+}
